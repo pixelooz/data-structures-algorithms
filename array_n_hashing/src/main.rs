@@ -32,8 +32,10 @@ mod remove_element;
 mod sort_an_array;
 mod sort_colors;
 mod subarray_sum_eq_k;
+mod top_k_freq_elem;
 mod two_sum;
 mod valid_anagram;
+mod valid_sudoku;
 
 fn main() {
     let arr = Vec::from_iter(6..=9);
