@@ -1,13 +1,15 @@
 use crate::{
     is_palindrome::is_palindrome, merge_sorted_array::merge,
-    merge_strings_alter::merge_alternately, reverse_string::reverse_string,
-    valid_palindrome_ii::valid_palindrome,
+    merge_strings_alter::merge_alternately, remove_duplicates_sorted_arr::remove_duplicates,
+    reverse_string::reverse_string, two_sum_ii::two_sum, valid_palindrome_ii::valid_palindrome,
 };
 
 mod is_palindrome;
 mod merge_sorted_array;
 mod merge_strings_alter;
+mod remove_duplicates_sorted_arr;
 mod reverse_string;
+mod two_sum_ii;
 mod valid_palindrome_ii;
 
 fn main() {
@@ -34,4 +36,12 @@ fn main() {
     let n = nums2.len() as i32;
     merge(&mut nums1, m, &mut nums2, n);
     println!("merge_sorted={:?}", nums1);
+
+    let mut arr = [1, 1, 2].to_vec();
+    let result = remove_duplicates(&mut arr);
+    println!("de-duplicated={:?}, {}", arr, result);
+
+    let arr = [0].to_vec();
+    let result = two_sum(arr, 9);
+    println!("two_sum_ii={:?}", result);
 }
