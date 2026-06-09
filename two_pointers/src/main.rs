@@ -1,14 +1,19 @@
 use crate::{
-    is_palindrome::is_palindrome, merge_sorted_array::merge,
+    container_with_most_water::max_area, is_palindrome::is_palindrome, merge_sorted_array::merge,
     merge_strings_alter::merge_alternately, remove_duplicates_sorted_arr::remove_duplicates,
-    reverse_string::reverse_string, two_sum_ii::two_sum, valid_palindrome_ii::valid_palindrome,
+    reverse_string::reverse_string, rotate_array::rotate, two_sum_ii::two_sum,
+    valid_palindrome_ii::valid_palindrome,
 };
 
+mod boats_to_save;
+mod container_with_most_water;
 mod is_palindrome;
 mod merge_sorted_array;
 mod merge_strings_alter;
 mod remove_duplicates_sorted_arr;
 mod reverse_string;
+mod rotate_array;
+mod three_sum;
 mod two_sum_ii;
 mod valid_palindrome_ii;
 
@@ -44,4 +49,12 @@ fn main() {
     let arr = [0].to_vec();
     let result = two_sum(arr, 9);
     println!("two_sum_ii={:?}", result);
+
+    let mut arr = [-1, -100, 3, 99].to_vec();
+    rotate(&mut arr, 2);
+    println!("rotated={:?}", arr);
+
+    let arr = [1, 1].to_vec();
+    let result = max_area(arr);
+    println!("area={:?}", result);
 }
