@@ -1,11 +1,10 @@
 use crate::{
     container_with_most_water::max_area, is_palindrome::is_palindrome, merge_sorted_array::merge,
     merge_strings_alter::merge_alternately, remove_duplicates_sorted_arr::remove_duplicates,
-    reverse_string::reverse_string, rotate_array::rotate, two_sum_ii::two_sum,
-    valid_palindrome_ii::valid_palindrome,
+    reverse_string::reverse_string, rotate_array::rotate, trap_rainwater::trap,
+    two_sum_ii::two_sum, valid_palindrome_ii::valid_palindrome,
 };
 
-mod boats_to_save;
 mod container_with_most_water;
 mod is_palindrome;
 mod merge_sorted_array;
@@ -14,6 +13,7 @@ mod remove_duplicates_sorted_arr;
 mod reverse_string;
 mod rotate_array;
 mod three_sum;
+mod trap_rainwater;
 mod two_sum_ii;
 mod valid_palindrome_ii;
 
@@ -57,4 +57,8 @@ fn main() {
     let arr = [1, 1].to_vec();
     let result = max_area(arr);
     println!("area={:?}", result);
+
+    let arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1].to_vec();
+    let result = trap(arr);
+    println!("trapped={:?}", result);
 }
