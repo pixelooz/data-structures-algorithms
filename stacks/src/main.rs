@@ -1,10 +1,11 @@
 use crate::{
     asteroid_collision::asteroid_collision, baseball_game::cal_points,
-    reverse_polish_notation::eval_rpn, valid_paren::is_valid,
+    daily_temp::daily_temperatures, reverse_polish_notation::eval_rpn, valid_paren::is_valid,
 };
 
 mod asteroid_collision;
 mod baseball_game;
+mod daily_temp;
 mod reverse_polish_notation;
 mod valid_paren;
 
@@ -32,4 +33,9 @@ fn main() {
     let asteroids = vec![8, -8];
     let result = asteroid_collision(asteroids);
     println!("{result:?}");
+
+    // daily temperatures
+    let temperatures = [73, 74, 75, 71, 69, 72, 76, 73].to_vec();
+    let result = daily_temperatures(temperatures);
+    println!("result={result:?}")
 }
