@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 
 mod combination_sum;
+mod combination_sum_ii;
 mod subsets;
 mod sum_all_subset_xor_total;
 
