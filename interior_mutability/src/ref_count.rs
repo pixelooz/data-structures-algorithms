@@ -1,4 +1,4 @@
-use std::ops::Deref;
+use std::{ops::Deref, ptr::NonNull};
 
 use crate::cell::Cell;
 
@@ -8,12 +8,8 @@ struct RcInner<T> {
 }
 
 pub struct Rc<T> {
-    inner: *const RcInner<T>,
+    inner: NonNull<RcInner<T>>,
 }
-
-// For drop impl of this type, we'll basically check if the `refcount` is 1, means we are the only
-// ones left, and are being dropped, meaning the memory should be freed.
-// Otherwise, if there are any more than 1 `refcount` we don't free the memory.
 
 impl<T> Rc<T> {
     pub fn new(value: T) -> Self {
@@ -22,7 +18,21 @@ impl<T> Rc<T> {
             refcount: Cell::new(1),
         });
         Self {
-            inner: Box::into_raw(inner),
+            inner: unsafe { NonNull::new_unchecked(Box::into_raw(inner)) },
+        }
+    }
+}
+
+impl<T> Drop for Rc<T> {
+    fn drop(&mut self) {
+        let inner = unsafe { self.inner.as_ref() };
+        let count = inner.refcount.get();
+        if count == 1 {
+            unsafe {
+                let _ = Box::from_raw(self.inner.as_ptr());
+            }
+        } else {
+            inner.refcount.set(count + 1);
         }
     }
 }
@@ -31,15 +41,15 @@ impl<T> Deref for Rc<T> {
     type Target = T;
 
     fn deref(&self) -> &Self::Target {
-        &unsafe { &*self.inner }.value
+        &unsafe { self.inner.as_ref() }.value
     }
 }
 
 impl<T> Clone for Rc<T> {
     fn clone(&self) -> Self {
-        let inner = unsafe { &*self.inner };
+        let inner = unsafe { self.inner.as_ref() };
         let c = inner.refcount.get();
         inner.refcount.set(c + 1);
-        Self { inner }
+        Self { inner: self.inner }
     }
 }
