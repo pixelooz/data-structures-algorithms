@@ -1,32 +1,32 @@
 use crate::Solution;
 
 impl Solution {
-    pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-        let mut result = vec![];
-        explore_subsets(&candidates, 0, &mut vec![], target, &mut result);
-        result
-    }
-}
+    pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
+        let mut results = Vec::new();
+        candidates.sort();
 
-fn explore_subsets(
-    candidates: &[i32],
-    index: usize,
-    curr_sub: &mut Vec<i32>,
-    target: i32,
-    result: &mut Vec<Vec<i32>>,
-) {
-    if index >= candidates.len() {
-        return;
+        fn explore_subs(
+            candidates: &[i32],
+            index: usize,
+            target: i32,
+            curr_subset: &mut Vec<i32>,
+            sum: i32,
+            results: &mut Vec<Vec<i32>>,
+        ) {
+            if sum == target {
+                results.push(curr_subset.clone());
+            }
+            for i in index..candidates.len() {
+                let curr_sum = sum + candidates[i];
+                if curr_sum > target {
+                    return;
+                }
+                curr_subset.push(candidates[i]);
+                explore_subs(candidates, i, target, curr_subset, curr_sum, results);
+                curr_subset.pop();
+            }
+        }
+        explore_subs(&candidates, 0, target, &mut vec![], 0, &mut results);
+        results
     }
-    let curr_sum: i32 = curr_sub.iter().sum();
-    if curr_sum > target {
-        return;
-    }
-    if curr_sum == target {
-        return result.push(curr_sub.clone());
-    }
-    curr_sub.push(candidates[index]);
-    explore_subsets(candidates, index, curr_sub, target, result);
-    curr_sub.pop();
-    explore_subsets(candidates, index + 1, curr_sub, target, result);
 }
