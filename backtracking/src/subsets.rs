@@ -10,7 +10,7 @@ fn explore(nums: &[i32], index: usize, curr_sub: &mut Vec<i32>, subs: &mut Vec<V
         return;
     }
     curr_sub.push(nums[index]);
-    explore(&nums, index + 1, curr_sub, subs);
+    explore(nums, index + 1, curr_sub, subs);
     curr_sub.pop();
-    explore(&nums, index + 1, curr_sub, subs);
+    explore(nums, index + 1, curr_sub, subs);
 }
