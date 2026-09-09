@@ -3,6 +3,9 @@
 mod combination_sum;
 mod combination_sum_ii;
 mod combinations;
+mod permutations;
+mod permutations_ii;
+mod subset_ii;
 mod subsets;
 mod sum_all_subset_xor_total;
 
