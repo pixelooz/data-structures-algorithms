@@ -4,6 +4,7 @@ mod combination_sum;
 mod combination_sum_ii;
 mod combinations;
 mod generate_parenthesis;
+mod palindrome_paritioning;
 mod permutations;
 mod permutations_ii;
 mod subset_ii;
