@@ -9,6 +9,7 @@ mod permutations_ii;
 mod subset_ii;
 mod subsets;
 mod sum_all_subset_xor_total;
+mod word_search;
 
 pub struct Solution;
 
