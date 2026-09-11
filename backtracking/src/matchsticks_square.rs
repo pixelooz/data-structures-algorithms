@@ -12,7 +12,7 @@ impl Solution {
         let size = (sum / 4) as i32;
         let mut sides = [0i32; 4];
 
-        matchsticks.sort_unstable();
+        matchsticks.sort_unstable_by(|a, b| b.cmp(a));
         if matchsticks[0] > size {
             return false;
         }

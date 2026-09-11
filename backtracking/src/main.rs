@@ -7,6 +7,7 @@ mod combinations;
 mod generate_parenthesis;
 mod matchsticks_square;
 mod palindrome_paritioning;
+mod partition_k_equal_sum_subset;
 mod permutations;
 mod permutations_ii;
 mod subset_ii;
