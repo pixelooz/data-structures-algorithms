@@ -8,7 +8,7 @@ impl Solution {
 
         for r in 0..rows {
             for c in 0..cols {
-                if Self::dfs(&mut board, &word_bytes, r, c, 0) {
+                if Self::dfs(&mut board, word_bytes, r, c, 0) {
                     return true;
                 }
             }

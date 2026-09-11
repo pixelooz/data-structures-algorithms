@@ -6,7 +6,7 @@ impl Solution {
             return false;
         }
         let sum: u64 = matchsticks.iter().map(|&x| x as u64).sum();
-        if sum % 4 != 0 {
+        if !sum.is_multiple_of(4) {
             return false;
         }
         let size = (sum / 4) as i32;
@@ -36,6 +36,6 @@ impl Solution {
             }
             sides[i] -= matchsticks[index];
         }
-        return false;
+        false
     }
 }
