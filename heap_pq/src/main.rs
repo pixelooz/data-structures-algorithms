@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod car_pooling;
 mod design_twitter;
 mod k_closest_points_origin;
 mod kth_largest_elem_stream;
