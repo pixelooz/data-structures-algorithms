@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod find_town_judge;
 mod island_perimeter;
 
 struct Solution;
