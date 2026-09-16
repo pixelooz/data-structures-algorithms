@@ -2,6 +2,7 @@
 
 mod find_town_judge;
 mod island_perimeter;
+mod number_islands;
 
 struct Solution;
 
