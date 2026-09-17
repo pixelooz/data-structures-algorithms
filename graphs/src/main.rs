@@ -6,6 +6,7 @@ mod graph_representation;
 mod island_perimeter;
 mod max_area_island;
 mod number_islands;
+mod rotting_oranges;
 mod walls_and_gates;
 
 struct Solution;
