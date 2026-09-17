@@ -38,7 +38,7 @@ impl Solution {
                 }
                 visited.insert((ur, uc));
                 queue.push_back((ur, uc));
-                grid[ur][uc] += grid[row][col] + 1;
+                grid[ur][uc] = grid[row][col] + 1;
             }
         }
     }
