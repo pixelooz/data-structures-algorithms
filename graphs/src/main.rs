@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 
 mod clone_graph;
+mod course_schedule;
 mod find_town_judge;
 mod graph_representation;
 mod island_perimeter;
