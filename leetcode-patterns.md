@@ -115,7 +115,7 @@
 
 | Done | # | Problem | Difficulty |
 |:---:|:---:|---|:---:|
-| ⬜ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy |
+| ✓ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy |
 | ⬜ | 2 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 Easy |
 | ⬜ | 3 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy |
 | ⬜ | 4 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | 🟢 Easy |
