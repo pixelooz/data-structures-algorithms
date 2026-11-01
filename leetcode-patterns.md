@@ -1,6 +1,7 @@
 # LeetCode Interview Patterns: Problem Sets
 
-**54 patterns · 632 problems** (about 621 unique; a few are cross-listed on purpose). Most patterns have 10 problems, and the ones that show up most in interviews have 15. Digit DP has only 7 because there are few good free problems for it.
+**54 patterns · 632 problems** (about 621 unique; a few are cross-listed on purpose). Most patterns have 10 problems, and the ones that show up most in interviews have 15. 
+Digit DP has only 7 because there are few good free problems for it.
 
 ## How to use this
 
