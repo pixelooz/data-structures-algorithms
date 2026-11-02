@@ -10,12 +10,12 @@ pub fn can_construct(ransom_note: String, magazine: String) -> bool {
 
     for i in 0..magazine.len() {
         if i < ransom_note.len() {
-            note_arr[(ransom_note[i] - 'a' as u8) as usize] += 1;
+            note_arr[(ransom_note[i] - b'a') as usize] += 1;
         }
-        mag_arr[(magazine[i] - 'a' as u8) as usize] += 1;
+        mag_arr[(magazine[i] - b'a') as usize] += 1;
     }
-    for i in 0..ransom_note.len() {
-        let letter = (ransom_note[i] - 'a' as u8);
+    for val in ransom_note {
+        let letter = (val - b'a');
         let mag = mag_arr[letter as usize];
         let note = note_arr[letter as usize];
         if mag < note {

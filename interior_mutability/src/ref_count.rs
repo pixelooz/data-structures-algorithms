@@ -18,7 +18,7 @@ impl<T> Rc<T> {
             refcount: Cell::new(1),
         });
         Self {
-            inner: unsafe { NonNull::new_unchecked(Box::into_raw(inner)) },
+            inner: Box::into_non_null(inner),
         }
     }
 }
