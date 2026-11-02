@@ -116,9 +116,9 @@ Digit DP has only 7 because there are few good free problems for it.
 
 | Done | # | Problem | Difficulty |
 |:---:|:---:|---|:---:|
-| ✓ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy |
-| ✓ | 2 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 Easy |
-| ✓ | 3 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy |
+| ✅ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy |
+| ✅ | 2 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 Easy |
+| ✅ | 3 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy |
 | ⬜ | 4 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | 🟢 Easy |
 | ⬜ | 5 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | 🟢 Easy |
 | ⬜ | 6 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | 🟢 Easy |
