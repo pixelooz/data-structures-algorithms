@@ -1,10 +1,9 @@
 #![allow(dead_code, unused)]
 
+mod find_unique_char;
+mod group_anagrams;
 mod isomorphic_strings;
 mod ransom_note;
 mod two_sum;
 mod valid_anagram;
-
-fn main() {
-    println!("Hello, world!");
-}
+mod word_pattern;
