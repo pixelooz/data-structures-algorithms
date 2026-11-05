@@ -124,8 +124,8 @@ Digit DP has only 7 because there are few good free problems for it.
 | ✅ | 6 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | 🟢 Easy |
 | ✅ | 7 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | 🟢 Easy |
 | ✅ | 8 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟡 Medium |
-| ⬜ | 9 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟡 Medium |
-| ⬜ | 10 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟡 Medium |
+| ✅ | 9 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟡 Medium |
+| ✅ | 10 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟡 Medium |
 | ⬜ | 11 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 🟡 Medium |
 | ⬜ | 12 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟡 Medium |
 | ⬜ | 13 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | 🟡 Medium |
